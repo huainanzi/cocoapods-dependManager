@@ -1,6 +1,6 @@
 # cocoapods-dependManager
 
-A description of cocoapods-dependManager.
+可以修改管理Podfile文件中的依赖Cocopods插件
 
 ## Installation
 
