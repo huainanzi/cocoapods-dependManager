@@ -19,26 +19,11 @@ module Pod
     #
     class Dependmanager < Command
       self.summary = 'Short description of cocoapods-dependManager.'
+      self.abstract_command = true
+      require 'cocoapods-dependManager/command/add.rb'
+      require 'cocoapods-dependManager/command/list.rb'
+      require 'cocoapods-dependManager/command/remove.rb'
 
-      self.description = <<-DESC
-        Longer description of cocoapods-dependManager.
-      DESC
-
-      self.arguments = 'NAME'
-
-      def initialize(argv)
-        @name = argv.shift_argument
-        super
-      end
-
-      def validate!
-        super
-        help! 'A Pod name is required.' unless @name
-      end
-
-      def run
-        UI.puts "Add your implementation for the cocoapods-dependManager plugin in #{__FILE__}"
-      end
     end
   end
 end
